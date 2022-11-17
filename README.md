@@ -3,8 +3,7 @@
 </p>
 
 <h1>Microsoft Azure- Configuring Active Directory Within Microsoft VMs </h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
-
+In this tutorial, we will be activating Active Directory within a virtual machine. We will also create another client desktop within another virtual machine and have the users that are configured on the Active Directory attempt to login to the client desktop. We wil be setting up Remote Desktop and the ability to access the Client Directory for both admiistrative and non-administrative users. .<br />
 
 <h2>Environments and Technologies Used</h2>
 
@@ -38,7 +37,9 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src = "https://i.imgur.com/GFYFR0R.png" " height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
  <p>
-1. Create a resource group in Azure.
+1. Create the Domain Controller VM (Windows Server 2022) named “DC-1”
+Take note of the Resource Group and Virtual Network (Vnet) that are created
+
 </p>                                                                                                    
                                                                                                      
 <p>
@@ -49,7 +50,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
                                                                                                  
                                                                                                  
                                                                                                  
-2. Create a virtual machine within Azure.
+2. Set Domain Controller’s NIC Private IP address to be static. 
 </p>
 <br />
 
@@ -57,7 +58,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/dDY9AQi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-3. Open Remote Desktop.
+3. Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet that was created in Step 1. (the one used for "DC-1").
 </p>
 <br />
 
@@ -65,7 +66,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/PB1vmBe.png" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-4. Install/ Enable IIS (Internet Information Services). Windows Control Pannel < Programs and Feautures
+4. Ensure that both VMs are in the same Vnet (you can check the topology with Network Watcher).
 </p>
 <br />
 
@@ -73,9 +74,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/yt4ZPAk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-5. Install "Microsoft Web Platform Installer".
-      - Add "MySQL 5.5"
-      - Add All Simple Versions Of X86PHP Up Until 7.3
+5. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping). The ping is expected to fail or "timeout".
 </p>
 <br />
 
@@ -83,7 +82,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/8ob8uQq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-6. Install osTicket v1.15.8.
+6. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall.
+
 </p>
 <br />
 
@@ -91,7 +91,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/SbhSS6V.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-7. Go Back To IIS, Sites->Default->osTicket, Double click PHP Manager, Enable PHP_imap.dll, Enable PHP_intl.dll, Enable PHP_opcache.dll
+7. Check back at Client-1 to see the ping succeed
+
 </p>
 <br />
 
@@ -99,7 +100,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/wVSvcC6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-8. Rename File To OST-Config.PHP And Assign Permissions To File.
+8. Login to DC-1 and install Active Directory Domain Services
+
 </p>
 <br />
 
@@ -107,9 +109,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/U0zZqC1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-9. Continue Setting Up OsTicket In Browser.
-  -Name Help Desk
-  -Add Default Email
+9. Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
 </p>
 <br />
 
@@ -117,7 +117,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/IdTzZWd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-10. Download And Install HeidiSQL.
+10. Restart and then log back into DC-1 as user: mydomain.com\labuser
 </p>
 <br />
 
@@ -125,6 +125,20 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/0LOpcLJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-11. OsTicket Is Ready. 
+11. In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
 </p>
 <br />
+
+<p> 12. Create a new OU named “_ADMINS” </p>
+
+<p> 13. Add jane_admin to the “Domain Admins” Security Group </p>
+
+<p>14. Add jane_admin to the “Domain Admins” Security Group </p>
+
+<p>15. Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
+</p>
+
+<p> 16. User jane_admin as your admin account from now on  </p>
+
+
+
