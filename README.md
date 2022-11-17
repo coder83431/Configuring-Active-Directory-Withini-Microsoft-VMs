@@ -10,7 +10,9 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
-- Internet Information Services (IIS)
+- Command Line/Windows Powershell
+- Microsoft Active Directory
+- Control Pannel
 
 <h2>Operating Systems Used </h2>
 
@@ -18,15 +20,15 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Microsoft Web Platform Installer
-- OsTicket V1.15.8
-- HeidiSQL
+- Windwows Powershell
+- Control Pannel
+- Remote Desktop
 
 <h2>Installation Steps</h2>
 
 
 <p>  
-<img src = "https://i.imgur.com/FoDQra2.png" " height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src = "https://imgur.com/xOn8Ufa.png" " height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 </p>
 
