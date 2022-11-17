@@ -1,8 +1,8 @@
 <p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
+<img src="https://imgur.com/ocgeUoz.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Configuring Active Directory Within Microsof VMs </h1>
+<h1>VMs - Configuring Active Directory Within Microsof VMs </h1>
 This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
 
 
