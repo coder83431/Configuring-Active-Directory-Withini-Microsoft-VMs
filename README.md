@@ -2,7 +2,7 @@
 <img src="https://imgur.com/ocgeUoz.png" alt="osTicket logo"/>
 </p>
 
-<h1>VMs - Configuring Active Directory Within Microsoft VMs </h1>
+<h1>Microsoft Azure- Configuring Active Directory Within Microsoft VMs </h1>
 This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
 
 
