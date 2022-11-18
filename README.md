@@ -140,5 +140,16 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created
 
 <p> 16. User jane_admin as your admin account from now on  </p>
 
+<p> 17. From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address</p>
+
+<p> 18. From the Azure Portal, restart Cliet-1</p>
+
+
+<p> 19. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)</p>
+
+<p> 20. Login to the Domain Controller (Remote Desktop) and verify that client-1 shows up in ADUC</p>
+
+<p> 21. Create a new OU named “_CLIENTS” and drag Client-1 into there</p>
+
 
 
