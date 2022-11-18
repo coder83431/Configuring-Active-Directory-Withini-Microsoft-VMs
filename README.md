@@ -38,7 +38,7 @@ In this tutorial, we will be activating Active Directory within a virtual machin
 </p>
  <p>
 1. Create the Domain Controller VM (Windows Server 2022) named “DC-1”
-Take note of the Resource Group and Virtual Network (Vnet) that are created
+Take note of the Resource Group and Virtual Network (Vnet) that are created (create a resource group if one isn't automatically created).
 
 </p>                                                                                                    
                                                                                                      
