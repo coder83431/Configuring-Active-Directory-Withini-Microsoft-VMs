@@ -130,9 +130,7 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/IdTzZWd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+
 <p>
 10. Restart and then log back into DC-1 as user: mydomain.com\labuser
 </p>
