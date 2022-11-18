@@ -131,7 +131,7 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created
 
 <p> 12. Create a new OU named “_ADMINS” </p>
 
-<p> 13. Add jane_admin to the “Domain Admins” Security Group </p>
+<p> 13. Create a new employee named “Jane Doe” (same password) with the username of “jane_admin” </p>
 
 <p>14. Add jane_admin to the “Domain Admins” Security Group </p>
 
