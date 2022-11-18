@@ -114,7 +114,7 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 <br />
 
 <p>
-<img src="https://i.imgur.com/wVSvcC6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/2s2furr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 8. Login to DC-1 and install Active Directory Domain Services
@@ -123,7 +123,7 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 <br />
 
 <p>
-<img src="https://i.imgur.com/U0zZqC1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/Nlg31jf.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 9. Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
@@ -139,7 +139,7 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 <br />
 
 <p>
-<img src="https://i.imgur.com/0LOpcLJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/JNPV4Q6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 11. In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
@@ -148,7 +148,17 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 
 <p> 12. Create a new OU named “_ADMINS” </p>
 
+<p>
+<img src="https://imgur.com/6PJCMUo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
 <p> 13. Create a new employee named “Jane Doe” (same password) with the username of “jane_admin” </p>
+
+<p>
+<img src="https://imgur.com/K05g1Ni.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+
 
 <p>14. Add jane_admin to the “Domain Admins” Security Group </p>
 
