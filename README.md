@@ -34,7 +34,11 @@ In this tutorial, we will be activating Active Directory within a virtual machin
 <p>Overview</p>
 
 <p>
-<img src = "https://i.imgur.com/GFYFR0R.png" " height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src = "https://imgur.com/LYWGrDr.png" " height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<p>
+<img src = "https://imgur.com/fwpNOew.png" " height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
  <p>
 1. Create the Domain Controller VM (Windows Server 2022) named “DC-1”
@@ -42,12 +46,13 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 
 </p>                                                                                                    
                                                                                                      
-<p>
-<img src= "https://i.imgur.com/Pk3J6Rk.png" " height="80%" width="80%" alt="Disk Sanitization Steps" />
-</p>
+
 
 <p>
-                                                                                                 
+   
+ <p>
+<img src= "https://imgur.com/SxlNlD0.png" " height="80%" width="80%" alt="Disk Sanitization Steps" />
+</p>
                                                                                                  
                                                                                                  
 2. Set Domain Controller’s NIC Private IP address to be static. 
@@ -57,21 +62,33 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 <p>
 <img src="https://i.imgur.com/dDY9AQi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+
+
+
+
 <p>
-3. Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet that was created in Step 1. (the one used for "DC-1").
+<img src="https://imgur.com/mhivNHG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+
+
+<p>
+3. Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet that was created in Step 1. (the one used for "DC-1"). Note that it is important that you choose Windows Server 2022 as your VM's operating system.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/PB1vmBe.png" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/gFyMk77.png" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+
+
 <p>
 4. Ensure that both VMs are in the same Vnet (you can check the topology with Network Watcher).
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/yt4ZPAk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/ecn1aBB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 5. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping). The ping is expected to fail or "timeout".
@@ -79,7 +96,7 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 <br />
 
 <p>
-<img src="https://i.imgur.com/8ob8uQq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/jFBSzWt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 6. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall.
@@ -88,7 +105,7 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 <br />
 
 <p>
-<img src="https://i.imgur.com/SbhSS6V.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/E5HmHDi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 7. Check back at Client-1 to see the ping succeed
