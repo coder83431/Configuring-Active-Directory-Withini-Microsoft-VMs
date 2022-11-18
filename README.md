@@ -163,16 +163,43 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 <p>15. Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
 </p>
 
+<p>
+<img src="https://imgur.com/Nu5aPaH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
 <p> 16. User jane_admin as your admin account from now on  </p>
+
+
+
+<p>
+<img src= "https://imgur.com/YNb8oQc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
 
 <p> 17. From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address</p>
 
-<p> 18. From the Azure Portal, restart Cliet-1</p>
+
+
+<p> 18. From the Azure Portal, restart Client-1</p>
 
 
 <p> 19. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)</p>
 
+<p>
+<img src= "https://imgur.com/wMekVWq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+
+<p>
+<img src= "https://imgur.com/KOUakfR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
 <p> 20. Login to the Domain Controller (Remote Desktop) and verify that client-1 shows up in ADUC</p>
+
+
+<p>
+<img src= "https://imgur.com/KhR7rDB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 
 <p> 21. Create a new OU named “_CLIENTS” and drag Client-1 into there</p>
 
