@@ -147,10 +147,10 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 <p> 12. Create a new OU named “_ADMINS” </p>
 
 <p>
-<img src="https://imgur.com/6PJCMUo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/kHDTEbh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
-<p> 13. Create a new employee named “Jane Doe” (same password) with the username of “jane_admin” </p>
+<p> 13. Create a new employee named “Jane Doe” (same password) with the username of “jane_admin” to the _ADMINS OU. </p>
 
 <p>
 <img src="https://imgur.com/K05g1Ni.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -202,6 +202,33 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 </p>
 
 <p> 21. Create a new OU named “_CLIENTS” and drag Client-1 into there</p>
+
+
+<p> 22.Log into Client-1 as mydomain.com\jane_admin and open system properties. Click “Remote Desktop” and allow “domain users” access to remote desktop.</p>
+
+<p> 23.You can now log into Client-1 as a normal, non-administrative user. Login to DC-1 as jane_admin and
+open PowerShell_ise as an administrator</p>
+
+
+<img src= "https://imgur.com/eOOi5LN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+<p> 24.Create a new File and paste the contents of the script into it (https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1).</p>
+
+<img src= "https://imgur.com/ngYiYVI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+<p> 25.Run the script and observe the accounts being created. Open ADUC and observe the accounts in the appropriate OU.</p>
+
+<img src= "https://imgur.com/DhzSers.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+<p> 26. Attempt to log into Client-1 with one of the accounts (take note of the password in the script).</p>
+
+
+
+
+
 
 
 
