@@ -3,7 +3,7 @@
 </p>
 
 <h1>Microsoft Azure- Configuring Active Directory Within Microsoft VMs </h1>
-In this tutorial, we will be activating Active Directory within a virtual machine. We will also create another client desktop within another virtual machine and have the users that are configured on the Active Directory attempt to login to the client desktop. We wil be setting up Remote Desktop and the ability to access the Client Directory for both admiistrative and non-administrative users. .<br />
+In this tutorial, we will be activating Active Directory within a virtual machine. We will also create another client desktop within another virtual machine and have the users that are configured on the Active Directory attempt to login to the client desktop.<br />
 
 <h2>Environments and Technologies Used</h2>
 
