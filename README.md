@@ -203,6 +203,9 @@ Take note of the Resource Group and Virtual Network (Vnet) that are created (cre
 
 <p> 21. Create a new OU named “_CLIENTS” and drag Client-1 into there</p>
 
+<p>
+<img src= "https://imgur.com/AP2QvUl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 
 <p> 22.Log into Client-1 as mydomain.com\jane_admin and open system properties. Click “Remote Desktop” and allow “domain users” access to remote desktop.</p>
 
@@ -218,7 +221,7 @@ open PowerShell_ise as an administrator</p>
 <img src= "https://imgur.com/ngYiYVI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
-<p> 25.Run the script and observe the accounts being created. Open ADUC and observe the accounts in the appropriate OU.</p>
+<p> 25.Run the script and observe the accounts being created. Open ADUC and observe the accounts in the appropriate OU. Note: Since thisGithub lab was completed on multiple days I changed the domain name from www.mydomain.com to mydomain.com</p>
 
 <img src= "https://imgur.com/DhzSers.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
