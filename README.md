@@ -221,7 +221,7 @@ open PowerShell_ise as an administrator</p>
 <img src= "https://imgur.com/ngYiYVI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
-<p> 25.Run the script and observe the accounts being created. Open ADUC and observe the accounts in the appropriate OU. Note: Since thisGithub lab was completed on multiple days I changed the domain name from www.mydomain.com to mydomain.com</p>
+<p> 25.Run the script and observe the accounts being created. Open ADUC and observe the accounts in the appropriate OU. Note: Since this Github lab was completed on multiple days, I changed the domain name from www.mydomain.com to mydomain.com</p>
 
 <img src= "https://imgur.com/DhzSers.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
