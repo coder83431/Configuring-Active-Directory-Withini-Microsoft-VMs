@@ -4,7 +4,7 @@
 
 <h1> Azure Sentiel (SIEM) Map Connected To a HoneyPot </h1>
 
-This walkthrough demonstrates the setup of Azure Sentinel (SIEM) which will be connected to a virtual machine that is configured to act as a vulnerable honeypot. The Azure Sentinel SIEM will be displayed as a world map where an RDP brute force attack can be observed attacking the VM from around the world. This walkthrough uses a pre-written Powershell script that will collect the attacker's longitude and latitude location to be able to display the location on the Sentinel map.<br />
+This walkthrough demonstrates the setup of Azure Sentinel (SIEM) which will be connected to a virtual machine that is configured to act as a vulnerable honeypot. The Azure Sentinel SIEM will be displayed as a world map where real RDP brute force attacks can be observed attacking the VM from around the world. This walkthrough uses a pre-written Powershell script that will collect the attacker's longitude and latitude location to be able to display the location on the Azure Sentinel map.<br />
 
 <h2>Environments and Technologies Used</h2>
 
